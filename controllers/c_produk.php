@@ -3,8 +3,8 @@ class ProdukController
 {
 	public function createProduk(){
 		/*	echo "test";*/
-		var_dump($_POST);
-		exit;
+		/*var_dump($_POST);
+		exit;*/
 		$foto = $_FILES['foto']['name'];
 		$tmp = $_FILES['foto']['tmp_name'];
 		/*$cabang=$_POST['cabang'];*/

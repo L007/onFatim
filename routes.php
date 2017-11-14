@@ -16,6 +16,7 @@ function call($controller, $action){
 		case 'home':
 		$controller=new HomeController();
 		require_once('models/m_home.php');
+		require_once('models/m_produk.php');
 		break;
 
 		case 'produk':

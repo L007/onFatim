@@ -8,7 +8,7 @@ Class HomeController{
 		require_once("views/pages/admin.php");
 	}
 	public function homeCabang(){
-		//$posts=Produk::allProduk();
+		$posts=Produk::allProduk();
 		require_once("views/pages/tambah_produk.php");
 	}
 	public function homeUser(){
