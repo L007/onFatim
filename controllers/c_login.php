@@ -26,11 +26,12 @@
 				header("location:index.php?controller=home&action=homeAdmin");
 			}elseif(Login::find($_POST['username'],$_POST['password'])==2){
 				$_SESSION['login_user']=$_POST['username'];
+				
 				header("location:index.php?controller=home&action=homeCabang");
 			}
 			elseif(Login::find($_POST['username'],$_POST['password'])==3){
 				$_SESSION['login_user']=$_POST['username'];
-				header("location:index.php?controller=home&action=homeUser");
+				header("location:index.php?controller=home&action=homeUser&cabang=cbg_patrang");
 			}
 			elseif(Login::find($_POST['username'],$_POST['password'])==4){
 				$_SESSION['login_user']=$_POST['username'];

@@ -3,8 +3,8 @@ class ProdukController
 {
 	public function createProduk(){
 		/*	echo "test";*/
-		var_dump($_POST);
-		exit;
+		/*var_dump($_POST);
+		exit;*/
 		$foto = $_FILES['foto']['name'];
 		$tmp = $_FILES['foto']['tmp_name'];
 		/*$cabang=$_POST['cabang'];*/
@@ -29,6 +29,24 @@ class ProdukController
 	public function allProduk(){
 		require_once("views/pages/tambahProduk.php");
 	}
+	public function editProdukCabang(){
+		$posts = Produk::editProdukCabang($_GET["id_produk"]);
+		require_once("views/pages/edit_produk.php");
+	}
+	public function editDataProdukCabang(){
+		
+		
+			$posts = Produk::editDataProdukCabang($_GET["nama_produk"],$_GET["harga"],$_GET["jumlah_stok"],
+				$_GET["cabang"],$_GET["id_produk"]);
+		
+
+
+		//$posts = Produk::editDataProdukCabang($_GET["id_produk"]);
+		header("location:index.php?controller=home&action=homeCabang");
+	}
+
+
+
 
 
 

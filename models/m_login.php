@@ -1,7 +1,5 @@
 <?php 
-	/**
-	* 
-	*/
+
 	class Login
 	{
 		public $username;
@@ -18,6 +16,7 @@
 
 			$req->execute(array('username'=>$username,'password'=>$password)); //variabel lokal diisi dari constructor
 			$auth = $req->fetch();
+			$_SESSION["id_user"]=$auth["id_user"];
 			if(count($auth)>1){
 				return $auth['level'];//return dari DB
 			}else{

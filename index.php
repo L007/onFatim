@@ -14,7 +14,7 @@ elseif (isset($_GET['controller']) && isset($_GET['action'])) {
 }
 else{
 	$controller = 'home';
-	$action 	= 'home';
+	$action 	= 'awal';
 }
 
 require_once('views/layout.php');

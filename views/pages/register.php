@@ -8,13 +8,13 @@
 		<div class="container">
 			<div class="top-header-left">
 				<ul>
-					<li><a href="myaccount.html">Akunku</a></li>
-					<li><a href="checkout.html">Bayar</a></li>
+					<li><a href="index.php"> On-Fatim</a></li>
+					<li><a href="#"> </a></li>
 					<div class="clearfix"> </div>
 				</ul>
 			</div>
 			<div class="top-header-center">
-				<p><span class="cart"> </span>Keranjang<label>$5256</label></p>
+				<p><span > </span> <label> </label></p>
 			</div>
 			<div class="top-header-right">
 				<ul>

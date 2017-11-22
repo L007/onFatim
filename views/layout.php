@@ -19,6 +19,7 @@ session_start();
 
     <link href="resources/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <script src="resources/js/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link href="resources/css/style.css" rel='stylesheet' type='text/css' />
       <meta name="viewport" content="width=device-width, initial-scale=1">

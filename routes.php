@@ -16,11 +16,17 @@ function call($controller, $action){
 		case 'home':
 		$controller=new HomeController();
 		require_once('models/m_home.php');
+		require_once('models/m_produk.php');
 		break;
 
 		case 'produk':
 		require_once('models/m_produk.php');
 		$controller=new ProdukController();
+		break;
+
+		case 'laporan':
+		require_once('models/m_laporan.php');
+		$controller=new LaporanController();
 		break;
 		
 		
@@ -30,8 +36,9 @@ function call($controller, $action){
 
 $controllers = array('login' => ['login', 'error','authentication'],
 	'register'=>['register','createUser','error'],
-	'home'=>['home','homeAdmin','homeCabang','homeUser','homeKelurahan'],
-	'produk'=>['createProduk','showProduk','allProduk'],
+	'home'=>['awal','pilihCabang','home','homeAdmin','homeCabang','homeUser','homeKelurahan'],
+	'produk'=>['createProduk','showProduk','allProduk','editProdukCabang','editDataProdukCabang'],
+	'laporan'=>['laporanAdminCabang']
 
 
 	);

@@ -1,0 +1,27 @@
+
+========= KECAMATAN ===========
+SELECT KE.kecamatan,K.kelurahan,P.* 
+			from tb_perdagangan P join kelurahan K on(P.idKelurahan=K.idKelurahan)
+            join kecamatan KE on(K.idKecamatan=KE.idKecamatan)
+			where KE.kecamatan = 'puger'
+			order by P.totalScore desc
+
+
+=========== INSERT USULAN ==================
+INSERT INTO `usulan`
+Values (Null,
+    (select idKelurahan from kelurahan where kelurahan = 'wonorejo')
+    ,'abc','abc','abc','abc','abc')
+
+
+
+	public function addDataUsulanKelurahan($Usulan,$lokasi,$kategori,$keterangan){
+		$list=[];
+		$db = DB::getInstance();
+		$kelurahan = $_SESSION['login_user'];
+		$req=$db->query("INSERT INTO `usulan`
+			Values (Null,
+				(select idKelurahan from kelurahan where kelurahan = '$kelurahan')
+				,'".$usulan"','".$lokasi"','".$kategori"','".$keterangan"','belum disetujui')")
+		return $req;
+	}
