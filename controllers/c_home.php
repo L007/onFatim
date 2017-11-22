@@ -17,7 +17,11 @@ Class HomeController{
 		require_once("views/pages/admin.php");
 	}
 	public function homeCabang(){
+<<<<<<< HEAD
 		$posts=Produk::showProdukCabang($_SESSION['login_user']);
+=======
+		$posts=Produk::allProduk();
+>>>>>>> 253dce0d91ee938e201db1824358bc4dfdb802b8
 		require_once("views/pages/tambah_produk.php");
 	}
 	public function homeUser(){

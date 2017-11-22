@@ -91,6 +91,7 @@
        ?>
        <div class="col-md-3">
         <div class="thumbnail card">
+<<<<<<< HEAD
 
           <img src="foto_produk/<?php echo $post->foto_produk; ?>" alt="kue" style="width:100%; height:180px">
           <div class="caption">
@@ -104,10 +105,191 @@
           </div>
           <button class="btn btn-danger" style="width=100%" type="submit" >Delete</button>
         </div>
+=======
+          <a href="#">
+            <img src="foto_produk/<?php echo $post->foto_produk; ?>" alt="kue" style="width:100%; height:180px">
+            <div class="caption">
+              <p> <?php echo "nama : ".  $post->nama_produk; ?></p>
+              <p> <?php echo "harga : ". $post->harga."/pcs"; ?></p>
+              <p> <?php echo "jumlah stok : ".$post->jumlah_stok; ?></p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <?php } ?>
+  <!--   <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+>>>>>>> 253dce0d91ee938e201db1824358bc4dfdb802b8
       </div>
       <?php } ?>
 
     </div>
+    <div class="col-md-3">
+      <div class="thumbnail card">
+        <a href="#">
+          <img src="resources/images/11.png" alt="kue" style="width:100%">
+          <div class="caption">
+            <p>Deskripsi</p>
+          </div>
+        </a>
+      </div>
+    </div> -->
   </div>
 </div>
 <!-- <script src="resources/js/bootstrap.min.js"></script> -->
