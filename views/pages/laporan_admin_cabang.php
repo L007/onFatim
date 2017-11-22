@@ -64,7 +64,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-8" style="background-color: #FADAA3; border-radius: 10px; margin-bottom: 20px;">
+			<div class="col-md-8" style="background-color: #FADAA3; border-radius: 10px; margin-bottom: 2 b0px;">
 				<div class="col-md-12">
 					<div class="row">
 						<div class="col-md-8">
@@ -75,116 +75,49 @@
 				<br>
 				<br>
 				<table class="table" style="margin-top: 30px;">
+
 					<tr>
 						<th style="text-align: left;">Kode Roti</th>
 						<th>Tanggal Penjualan</th>
-						<th>Jenis Roti</th>
 						<th>Nama Roti</th>
 						<th>Jumlah Terjual</th>
 						<th>Sisa Stok</th>
 					</tr>
-					<tr>
-						<td>1011</td>
-						<td>13 November 2017</td>
-						<td>Roti Putih</td>
-						<td>White Bread</td>
-						<td>20</td>
-						<td>30</td>
-					</tr>      
-					<tr>
-						<td>1011</td>
-						<td>13 November 2017</td>
-						<td>Roti Putih</td>
-						<td>White Bread</td>
-						<td>20</td>
-						<td>30</td>
-					</tr>
-					<tr>
-						<td>1011</td>
-						<td>13 November 2017</td>
-						<td>Roti Putih</td>
-						<td>White Bread</td>
-						<td>20</td>
-						<td>30</td>
-					</tr>      
-					<tr>
-						<td>1011</td>
-						<td>13 November 2017</td>
-						<td>Roti Putih</td>
-						<td>White Bread</td>
-						<td>20</td>
-						<td>30</td>
-					</tr>
-					<tr>
-						<td>1011</td>
-						<td>13 November 2017</td>
-						<td>Roti Putih</td>
-						<td>White Bread</td>
-						<td>20</td>
-						<td>30</td>
-					</tr>      
-					<tr>
-						<td>1011</td>
-						<td>13 November 2017</td>
-						<td>Roti Putih</td>
-						<td>White Bread</td>
-						<td>20</td>
-						<td>30</td>
-					</tr>
-					<tr>
-						<td>1011</td>
-						<td>13 November 2017</td>
-						<td>Roti Putih</td>
-						<td>White Bread</td>
-						<td>20</td>
-						<td>30</td>
-					</tr>      
-					<tr>
-						<td>1011</td>
-						<td>13 November 2017</td>
-						<td>Roti Putih</td>
-						<td>White Bread</td>
-						<td>20</td>
-						<td>30</td>
-					</tr>
-					<tr>
-						<td>1011</td>
-						<td>13 November 2017</td>
-						<td>Roti Putih</td>
-						<td>White Bread</td>
-						<td>20</td>
-						<td>30</td>
-					</tr>      
-					<tr>
-						<td>1011</td>
-						<td>13 November 2017</td>
-						<td>Roti Putih</td>
-						<td>White Bread</td>
-						<td>20</td>
-						<td>30</td>
-					</tr>
-				</table>
-			</div>
-			<div class="col-md-2">
-				<div class="col-md-12">
-					<div class="col-md-1"></div>
-					<div class="thumbnail card col-md-10">
-						<a href="#">
-							<img src="images/11.png" alt="kue" style="width:100%">
-						</a>
-					</div>
+					
+					<?php foreach ($posts as $post) {
+					# code...
+						?>
+						<tr>
+							<td><?php echo $post->id_produk; ?></td>
+							<td><?php echo $post->tanggal; ?></td>
+							<td><?php echo $post->nama_produk; ?></td>
+							<td><?php echo $post->jumlah_terjual; ?></td>
+							<td><?php echo $post->sisa_stok; ?></td>
+						
+						</tr>      
+						<?php } ?>
+					</table>
 				</div>
-				<div class="col-md-12">
-					<div class="col-md-1"></div>
-					<div class="thumbnail card col-md-10">
-						<a href="">
-							<img src="images/11.png" alt="kue" style="width:100%">
-						</a>
+				<div class="col-md-2">
+					<div class="col-md-12">
+						<div class="col-md-1"></div>
+						<div class="thumbnail card col-md-10">
+							<a href="#">
+								<img src="images/11.png" alt="kue" style="width:100%">
+							</a>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="col-md-1"></div>
+						<div class="thumbnail card col-md-10">
+							<a href="">
+								<img src="images/11.png" alt="kue" style="width:100%">
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
 	</body>
 	</html>

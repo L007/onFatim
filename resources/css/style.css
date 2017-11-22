@@ -1158,7 +1158,7 @@ i.white-cart1{
 	text-transform: uppercase;
 }
 
-.register-top-grid input[type="text"], .register-bottom-grid input[type="text"] {
+.register-top-grid input[type="text"], .register-bottom-grid input[type="text"],.register-bottom-grid input[type="password"]  {
 	border: 1px solid #EEE;
 	outline-color:#FF5B36;
 	width: 96%;
@@ -1303,7 +1303,7 @@ div.register-bottom-grid {
 	display: block;
 	text-transform: uppercase;
 }
-.login-right input[type="text"] {
+.login-right input[type="text"],.login-right input[type="password"] {
 	border: 1px solid #EEE;
 	outline-color:#FF6392;
 	width: 96%;
