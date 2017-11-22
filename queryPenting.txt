@@ -1,0 +1,6 @@
+SELECT p.id_produk,p.nama_produk,SUM(jumlah) AS jumlah_terjual,SUM(total_harga) AS total_harga
+,p.jumlah_stok-SUM(jumlah)AS sisa_stok,tanggal
+FROM tb_penjualan tbp JOIN users u on tbp.id_user=u.id_user
+JOIN produk p ON tbp.id_produk=p.id_produk
+WHERE p.cabang='cbg_patrang'
+GROUP by tbp.id_produk,MONTH(tanggal) 
