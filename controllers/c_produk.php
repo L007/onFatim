@@ -24,12 +24,21 @@ class ProdukController
 
 	public function showProduk(){
 		require_once("views/pages/createProduk.php");
+
+
 	}
+	public function showProdukCabang(){
+		$cabang=Home::showCabang();
+		$posts=Produk::showProdukCabang($_GET["cabang"]);
+		require_once("views/pages/products.php");
+	}
+
 
 	public function allProduk(){
 		require_once("views/pages/tambahProduk.php");
 	}
 	public function editProdukCabang(){
+		//$cabang=Home::showCabang();
 		$posts = Produk::editProdukCabang($_GET["id_produk"]);
 		require_once("views/pages/edit_produk.php");
 	}
@@ -43,6 +52,12 @@ class ProdukController
 
 		//$posts = Produk::editDataProdukCabang($_GET["id_produk"]);
 		header("location:index.php?controller=home&action=homeCabang");
+	}
+
+	public function detailProduk(){
+		$cabang=Home::showCabang();
+		$posts=Produk::detailProdukCabang($_GET["id_produk"]);
+		require_once('views/pages/detailProduk.php');
 	}
 
 

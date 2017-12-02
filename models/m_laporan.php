@@ -7,7 +7,8 @@ class Laporan
 	public $total_harga;
 	public $sisa_stok;
 	public $tanggal;
-	function __construct($id_produk,$nama_produk,$jumlah_terjual,$total_harga,$sisa_stok,$tanggal)
+	public $peramalan;
+	function __construct($id_produk,$nama_produk,$jumlah_terjual,$total_harga,$sisa_stok,$tanggal,$peramalan)
 	{
 		
 		$this->id_produk=$id_produk;
@@ -16,6 +17,7 @@ class Laporan
 		$this->total_harga=$total_harga;
 		$this->sisa_stok=$sisa_stok;
 		$this->tanggal=$tanggal;
+		$this->peramalan=$peramalan;
 
 	}
 
@@ -33,8 +35,14 @@ class Laporan
 			GROUP by tbp.id_produk,MONTH(tanggal)");
 
 		foreach ($req->fetchAll() as $post) {
+			$a=0.5;
+			$single=($a*1)+($a*$post['jumlah_terjual']);
+			$peramalan=($a*$single)+$a*1;
+
+
+
 			$list[] = new Laporan($post['id_produk'],$post['nama_produk'],$post['jumlah_terjual'],$post['total_harga'],
-				$post['sisa_stok'],$post['tanggal']
+				$post['sisa_stok'],$post['tanggal'],$peramalan
 				);
 		}
 

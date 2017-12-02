@@ -34,7 +34,7 @@
 								<li><a href=""></a></li>
 							</ul>
 						</li>
-						<li><a href="index.html" style="color: #ffffff;">Logout</a></li>
+						<li><a href="index.php" style="color: #ffffff;">Logout</a></li>
 						<li><a href="#">|</a></li>
 						<li><a href="#" style="font-weight: bold; color: red;">Admin</a></li>
 					</ul>
@@ -82,6 +82,7 @@
 						<th>Nama Roti</th>
 						<th>Jumlah Terjual</th>
 						<th>Sisa Stok</th>
+						<th>Peramalan bulan depan</th>
 					</tr>
 					
 					<?php foreach ($posts as $post) {
@@ -93,6 +94,7 @@
 							<td><?php echo $post->nama_produk; ?></td>
 							<td><?php echo $post->jumlah_terjual; ?></td>
 							<td><?php echo $post->sisa_stok; ?></td>
+							<td><?php echo $post->peramalan; ?></td>
 						
 						</tr>      
 						<?php } ?>

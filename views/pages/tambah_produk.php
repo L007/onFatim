@@ -94,9 +94,9 @@
 
           <img src="foto_produk/<?php echo $post->foto_produk; ?>" alt="kue" style="width:100%; height:180px">
           <div class="caption">
-            <p> <?php echo "nama : ".  $post->nama_produk; ?></p>
-            <p> <?php echo "harga : ". $post->harga."/pcs"; ?></p>
-            <p> <?php echo "jumlah stok : ".$post->jumlah_stok; ?></p>
+            <font size="3"><p> <?php echo $post->nama_produk; ?></p></font>
+            <font size="2"><b><p> <?php echo "Rp ". number_format($post->harga,0,".",".")."/pcs"; ?></p></b></font>
+           <font size="2" color="green"> <p> <?php echo "Stok : ".$post->jumlah_stok; ?></p></font>
 
           </div>
           <div class="col-md-6">

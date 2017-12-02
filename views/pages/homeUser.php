@@ -36,8 +36,8 @@
 						</form>
 
 					</li>
-					<li><a href="#"><?php echo $_SESSION["login_user"] ?></a></li>
-					<li><a href="#">Customer</a></li>
+					<li><a href="index.php"><?php echo $_SESSION["login_user"] ?></a></li>
+					<li><a href="logout.php">Logout</a></li>
 					
 				</ul>
 			</div>
@@ -50,7 +50,7 @@
 				<span class="menu"> </span>
 				<ul>
 					<li class="active"><a href="index.php">Rumah</a></li>
-					<li><a href="products.html">Produk</a></li>
+					<li><a href="?controller=produk&action=showProdukCabang&cabang=<?php echo $_GET['cabang']; ?>">Produk</a></li>
 					<li><a href="about.html">Tentang</a></li>
 					<li><a href="contact.html">Kontak</a></li>
 					<div class="clearfix"> </div>

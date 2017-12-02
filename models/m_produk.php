@@ -64,7 +64,7 @@ class Produk
 
 		foreach ($req->fetchAll() as $post) {
 			$list[] = new Produk($post['id_produk'],$post['nama_produk'],$post['harga'],$post['jumlah_stok'],
-				$post['cabang'],$post['foto_produk'],$post['Deskripsi']
+				$post['cabang'],$post['foto_produk'],$post['deskripsi']
 				);
 		}
 
@@ -81,7 +81,24 @@ class Produk
 
 		foreach ($req->fetchAll() as $post) {
 			$list[] = new Produk($post['id_produk'],$post['nama_produk'],$post['harga'],$post['jumlah_stok'],
-				$post['cabang'],$post['foto_produk']
+				$post['cabang'],$post['foto_produk'],$post['deskripsi']
+				);
+		}
+
+
+		return $list;
+	}
+
+	public static function detailProdukCabang($id_produk){
+		$list=[];
+
+		$db = DB::getInstance();
+
+		$req = $db->query("SELECT * FROM produk where id_produk=$id_produk");
+
+		foreach ($req->fetchAll() as $post) {
+			$list[] = new Produk($post['id_produk'],$post['nama_produk'],$post['harga'],$post['jumlah_stok'],
+				$post['cabang'],$post['foto_produk'],$post['deskripsi']
 				);
 		}
 
@@ -93,8 +110,8 @@ class Produk
 		$db = DB::getInstance();
 
 		$req = $db->query("UPDATE produk set nama_produk='$nama_produk', harga='$harga', jumlah_stok='$jumlah_stok',
-		 cabang='$cabang' where id_produk='$id_produk'
-		 ");
+			cabang='$cabang' where id_produk='$id_produk'
+			");
 
 		return $req;
 	}
