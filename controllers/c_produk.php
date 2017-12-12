@@ -18,7 +18,7 @@ class ProdukController
 			$Produk = Produk::createProduk($_POST["nama_produk"],$_POST["harga"],$_POST["jumlah_stok"],$_POST["cabang"],$fotobaru);
 		}
 
-		header("location:index.php?controller=home&action=homeCabang");
+		header("location:index.php?controller=produk&action=tambahProduk");
 		//require_once("views/pages/createProduk.php");
 	}
 
@@ -31,6 +31,10 @@ class ProdukController
 		$cabang=Home::showCabang();
 		$posts=Produk::showProdukCabang($_GET["cabang"]);
 		require_once("views/pages/products.php");
+	}
+	public function tambahProduk(){
+		$posts=Produk::showProdukCabang($_SESSION['login_user']);
+		require_once("views/pages/tambah_produk.php");
 	}
 
 
@@ -45,13 +49,23 @@ class ProdukController
 	public function editDataProdukCabang(){
 		
 		
-			$posts = Produk::editDataProdukCabang($_GET["nama_produk"],$_GET["harga"],$_GET["jumlah_stok"],
-				$_GET["cabang"],$_GET["id_produk"]);
+		$posts = Produk::editDataProdukCabang($_GET["nama_produk"],$_GET["harga"],$_GET["jumlah_stok"],
+			$_GET["cabang"],$_GET["id_produk"]);
 		
 
 
 		//$posts = Produk::editDataProdukCabang($_GET["id_produk"]);
-		header("location:index.php?controller=home&action=homeCabang");
+		header("location:index.php?controller=produk&action=tambahProduk");
+	}
+		public function deleteDataProdukCabang(){
+		
+		
+		$posts = Produk::deleteDataProdukCabang($_GET["id_produk"]);
+		
+
+
+		//$posts = Produk::editDataProdukCabang($_GET["id_produk"]);
+		header("location:index.php?controller=produk&action=tambahProduk");
 	}
 
 	public function detailProduk(){

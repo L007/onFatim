@@ -115,7 +115,13 @@ class Produk
 
 		return $req;
 	}
+	public static function deleteDataProdukCabang($id_produk){
+		$db = DB::getInstance();
 
+		$req = $db->query("DELETE from produk where id_produk='$id_produk'");
+
+		return $req;
+	}
 
 
 }

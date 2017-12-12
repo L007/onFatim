@@ -15,13 +15,13 @@
     <nav class="navbar navbar-default" style="background: #242D3E; border-color: #242D3E;">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#" style="color: #ffffff;">ADMIN CABANG | Tambah Produk Roti</a>
+          <a class="navbar-brand" href="#" style="color: #ffffff;">ADMIN CABANG | Kelola Produk Roti</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" style="color: #ffffff;">Beranda <span class="sr-only">(current)</span></a></li>
+            <li><a href="?controller=home&action=homeCabang" style="color: #ffffff;">Beranda <span class="sr-only">(current)</span></a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ffffff;">Input <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ffffff;">Kelola <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Roti</a></li>
 
@@ -32,7 +32,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: #ffffff;">Laporan <span class="caret"></span></a>
               <ul class="dropdown-menu">
               <li><a href="?controller=laporan&action=laporanAdminCabang">Penjualan</a></li>
-               <li><a href="#">Pelanggan</a></li>
+                <li><a href="?controller=laporan&action=laporanTransaksiCabang">Transaksi</a></li>
              </ul>
            </li>
            <li><a href="logout.php" style="color: #ffffff;">Logout</a></li>
@@ -102,7 +102,8 @@
           <div class="col-md-6">
             <a href="?controller=produk&action=editProdukCabang&id_produk=<?=$post->id_produk?>"><button class="btn btn-success" style="width:100%" type="submit">Edit</button></a>
           </div>
-          <button class="btn btn-danger" style="width=100%" type="submit" >Delete</button>
+          <a href="?controller=produk&action=deleteDataProdukCabang&id_produk=<?=$post->id_produk?>">
+          <button class="btn btn-danger" style="width=100%" type="submit" >Delete</button></a>
         </div>
       </div>
       <?php } ?>

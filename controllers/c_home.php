@@ -17,15 +17,26 @@ Class HomeController{
 		require_once("views/pages/admin.php");
 	}
 	public function homeCabang(){
-		$posts=Produk::showProdukCabang($_SESSION['login_user']);
-		require_once("views/pages/tambah_produk.php");
+		$posts=Home::showStat();
+		$id=Home::showJumlahPelanggan();
+		require_once("views/pages/menu_admin.php");
 	}
 	public function homeUser(){
 		$cabang=Home::showCabang();
 		$posts=Produk::showProdukCabang($_GET["cabang"]);
+
 		require_once("views/pages/homeUser.php");
 	}
-
+	public function showTransaksiUser(){
+		$cabang=Home::showCabang();
+		$posts=Home::showTransaksiUser($_SESSION['id_user']);
+		require_once('views/pages/transaksi_user.php');
+	}
+/*	public function showStat(){
+		$cabang=Home::showCabang();
+		$posts=Home::showStat();
+		require_once("views/pages/menu_admin.php");
+	}*/
 
 }
 

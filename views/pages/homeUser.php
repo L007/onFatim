@@ -9,8 +9,8 @@
 		<div class="container">
 			<div class="top-header-left">
 				<ul>
-					<li><a href="myaccount.html">Akunku</a></li>
-					<li><a href="checkout.html">Bayar</a></li>
+					
+					<!-- <li><a href="checkout.html">Bayar</a></li> -->
 					<li class="dropdown navbar-nav">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_GET['cabang']; ?> <span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -21,11 +21,13 @@
 							<?php } ?>
 						</ul>
 					</li>
+					<li><a href="?controller=home&action=showTransaksiUser&cabang=<?php echo $_GET['cabang'];?>">Transaksi</a></li>
 					<div class="clearfix"> </div>
 				</ul>
 			</div>
+
 			<div class="top-header-center">
-				<p><span class="cart"> </span>Keranjang<label>$5256</label></p>
+				<p><a style="color: white;" href="?controller=keranjang&action=showCart&cabang=<?php echo $_GET['cabang']; ?>"><span class="cart"> </span>Keranjang</p>
 			</div>
 			<div class="top-header-right">
 				<ul>
@@ -49,7 +51,7 @@
 			<div class="head-nav">
 				<span class="menu"> </span>
 				<ul>
-					<li class="active"><a href="index.php">Rumah</a></li>
+					<li class="active"><a href="?controller=home&action=homeUser&cabang=cbg_patrang">Rumah</a></li>
 					<li><a href="?controller=produk&action=showProdukCabang&cabang=<?php echo $_GET['cabang']; ?>">Produk</a></li>
 					<li><a href="about.html">Tentang</a></li>
 					<li><a href="contact.html">Kontak</a></li>

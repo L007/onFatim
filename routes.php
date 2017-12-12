@@ -29,6 +29,13 @@ function call($controller, $action){
 		require_once('models/m_laporan.php');
 		$controller=new LaporanController();
 		break;
+
+		case 'keranjang':
+		require_once('models/m_home.php');
+		require_once('models/m_kode.php');
+		require_once('models/m_keranjang.php');
+		$controller=new KeranjangController();
+		break;
 		
 		
 	}
@@ -37,9 +44,10 @@ function call($controller, $action){
 
 $controllers = array('login' => ['login', 'error','authentication'],
 	'register'=>['register','createUser','error'],
-	'home'=>['awal','pilihCabang','home','homeAdmin','homeCabang','homeUser','homeKelurahan'],
-	'produk'=>['createProduk','showProduk','showProdukCabang','detailProduk','allProduk','editProdukCabang','editDataProdukCabang'],
-	'laporan'=>['laporanAdminCabang']
+	'home'=>['awal','pilihCabang','home','homeAdmin','homeCabang','homeUser','showStat','showTransaksiUser'],
+	'produk'=>['createProduk','tambahProduk','showProduk','showProdukCabang','detailProduk','allProduk','editProdukCabang','editDataProdukCabang','deleteDataProdukCabang'],
+	'laporan'=>['laporanAdminCabang','laporanTransaksiCabang','editStatusTransaksiCabang','detailTransaksiCabang'],
+	'keranjang'=>['addCart','showCart','clearCart','bayarCart','kodeUnik']
 
 
 	);

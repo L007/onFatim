@@ -74,13 +74,16 @@
 						<form>
 							<div class="col-md-9">
 								<div class="single_left">
+										
+										<!-- <input type="" name="id_user" value="<?php echo $_SESSION["id_user"]; ?>"> -->
+										<input type="hidden" name="controller" value="keranjang">
+										<input type="hidden" name="action" value="addCart">
 									<?php foreach ($posts as $post) {
 
 										?>
 
 
-										<input type="hidden" name="id_produk" value="<?php echo $post->id_produk; ?>">
-										<input type="hidden" name="id_user" value="<?php echo $_SESSION["id_user"]; ?>">
+								<input type="hidden" name="id_produk" value="<?php echo $post->id_produk; ?>">
 
 
 
@@ -98,12 +101,12 @@
 											<br><br>
 											<div class="form-group">
 												<label style="color: #242D3E;">Jumlah pembelian </label>
-												<input type="number" max="<?php echo $post->jumlah_stok; ?>" name="jumlah" class="form-control" placeholder="Masukkan jumlah pembelian">
+												<input type="number" min="10" max="<?php echo $post->jumlah_stok; ?>" name="jumlah" class="form-control" placeholder="Masukkan jumlah pembelian" required autofocus>
 											</div>
 
 											
 											
-											<button type="submit" class="btn btn-success" style="width:30%" type="submit">Beli</button>
+											<button type="submit" class="btn btn-success" style="width:40%" type="submit">Masukkan ke keranjang</button>
 
 
 <!-- 											<div class="btn_form">
