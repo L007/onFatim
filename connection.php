@@ -1,6 +1,6 @@
 <?php 
 	class DB{
-		//komen
+		//komen lagi
 		private static $instance = NULL;
 
 		private function __construct(){}
